@@ -6,18 +6,25 @@ class Ticket:
         self.destination = destination # pointer to next
 
 """       
-Understanding: Since this can run in linear time a for loop to find the head can be done.
+Understanding:
+    Since this can run in linear time a for loop to find the head can be done.
+    Since we're using the built in dictionary I don't have to do the hash table overhead work!
 Plan:
-1. Define the hash table to store the reconstructed trip (sould be named route since that's what's returned)
+1. Define the hash table to store the reconstructed trip (should be named route since that's what's returned)
 Loop the tickets to find the head and add it to the hash table
 """
 def reconstruct_trip(tickets, length):
     # Store the
     hashtable = {}
     # The reconstructed trip is stored here.
-    route = [None] * length
+    route = []
+    numstops = len(route)
 
-    # Look for the head
-    for 
+    # Put all of the tickets in the hashtable
+    for stop in tickets:
+        hashtable[stop.source]
+
+
+
 
     return route
