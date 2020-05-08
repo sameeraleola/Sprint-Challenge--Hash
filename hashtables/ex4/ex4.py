@@ -4,16 +4,16 @@ def has_negatives(a):
     # check num for a positive
     # populate the negs array if it is found.
     nums = dict()
-    negs = []
+    result = []
 
-    # Put the positives in the nums dictionary
+    # Put the negatives in the nums dictionary
+    for neg in a:
+        if neg < 0:
+            nums[abs(neg)] = abs(neg)
+
     for num in a:
-        if num > 0:
-           nums[num] = num
-         
-
-
-    
+        if num >= 0 and num in nums:
+            result.append(num)
 
     return result
 
