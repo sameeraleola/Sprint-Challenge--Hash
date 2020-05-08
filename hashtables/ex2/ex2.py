@@ -11,20 +11,23 @@ Understanding:
     Since we're using the built in dictionary I don't have to do the hash table overhead work!
 Plan:
 1. Define the hash table to store the reconstructed trip (should be named route since that's what's returned)
-Loop the tickets to find the head and add it to the hash table
+2. Loop the tickets to find the head and add it to the linked list.
+3. Add the rest of the tickets to the hash table
 """
 def reconstruct_trip(tickets, length):
-    # Store the
+    # Store all the tickets
     hashtable = {}
-    # The reconstructed trip is stored here.
-    route = []
-    numstops = len(route)
+    # # The reconstructed trip is stored here.
+    route = [None] * length
 
-    # Put all of the tickets in the hashtable
     for stop in tickets:
-        hashtable[stop.source]
+        if stop.source == "NONE":
+            route[0] = stop.destination
+        hashtable[stop.source] = stop.destination
 
-
-
+    for stops in range(length):
+        # if route[j - 1] is not None:
+        if route[stops - 1] is not None:
+            route[stops] = hashtable[route[stops - 1]]
 
     return route
