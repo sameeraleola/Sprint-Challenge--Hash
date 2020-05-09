@@ -14,7 +14,7 @@ def get_indices_of_item_weights(weights, length, limit):
 
         if needed in packages:
             indx2 = packages[needed]
-            found = [indx, indx2
+            found = [indx, indx2]
             found.sort(reverse = True)
             return (found[0], found[1])
         else:
