@@ -1,7 +1,10 @@
 def intersection(arrays):
 
     """
-    YOUR CODE HERE
+    U:
+    P:
+    E:
+    R:
     """
 
     return result
